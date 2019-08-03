@@ -5,3 +5,88 @@
 .banner .nav a {
   @extend .nav-link;
 }
+
+.container-fluid{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+#navbar{
+  position: fixed;
+  padding: 20px 40px;
+  right: 0;
+  left: 0;
+  top:0;
+  z-index: 100;
+  transition-duration: 0.5s;
+}
+
+#logo a{
+  color: white;
+}
+
+#toggler{
+  position: absolute;
+  left: 40px;
+  top: 15px;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+#nav{
+  position: fixed;
+  background-color: rgba(0 , 0 , 0 , 0.8);
+  width: 240px;
+  right: -240px;
+  top: 0;
+  bottom: 0;
+  line-height: 2.5em;
+  padding-top: 30px;
+  transition-duration: 0.4s;
+}
+
+#nav a{
+  color: white;
+  font-weight: 500;
+  padding: 0 20px;
+}
+
+#nav a:hover{
+  color: #bdf;
+}
+
+@media (min-width: 992px) {
+  #toggler{
+    display: none;
+  }
+
+  #nav{
+    position: static;
+    width: auto;
+    background-color: transparent;
+    padding-top: 0;
+  }
+
+  #nav li{
+    float: right;
+  }
+
+  #navbar{
+    display: flex;
+  }
+
+  #logo{
+    order: 1;
+    margin-right: auto;
+  }
+
+  #logo h4{
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+}

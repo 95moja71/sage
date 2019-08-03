@@ -2,6 +2,19 @@
 
 /** Import everything from autoload */
 @import "./autoload/**/*";
+body{
+  background: blue;
+}
+
+@font-face {
+	font-family: 'IRANYekanLight';
+	src: url("../../fonts/IRANYekan/iranyekanweblightfanum.eot"), url("../../fonts/IRANYekan/iranyekanweblightfanum.woff") format('woff'), url("../../fonts/IRANYekan/iranyekanweblightfanum.ttf") format('truetype');
+}
+
+body {
+	font-family: IRANYekanLight !important;
+	background-color: #eee !important;
+}
 
 /**
  * Import npm dependencies
@@ -12,6 +25,12 @@
 // @import "~some-node-module";
 
 /** Import theme styles */
+@import "lib/rtl";
+@import "~animate.css/animate.min";
+@import "~owl.carousel2/dist/assets/owl.carousel";
+@import "~font-awesome/css/font-awesome.min";
+@import "~lightbox2/dist/css/lightbox.min.css";
+@import "~owl.carousel2/dist/assets/owl.carousel.min.css";
 @import "common/global";
 @import "components/buttons";
 @import "components/comments";
@@ -23,3 +42,4 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+
