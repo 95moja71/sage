@@ -38,7 +38,7 @@ if (version_compare('4.7.0', get_bloginfo('version'), '>=')) {
  * Ensure dependencies are loaded
  */
 if (!class_exists('Roots\\Sage\\Container')) {
-    if (!file_exists($composer = __DIR__.'/../vendor/autoload.php')) {
+    if (!file_exists($composer = __DIR__ . '/../vendor/autoload.php')) {
         $sage_error(
             __('You must run <code>composer install</code> from the Sage directory.', 'sage'),
             __('Autoloader not found.', 'sage')
@@ -85,8 +85,33 @@ array_map(
 Container::getInstance()
     ->bindIf('config', function () {
         return new Config([
-            'assets' => require dirname(__DIR__).'/config/assets.php',
-            'theme' => require dirname(__DIR__).'/config/theme.php',
-            'view' => require dirname(__DIR__).'/config/view.php',
+            'assets' => require dirname(__DIR__) . '/config/assets.php',
+            'theme' => require dirname(__DIR__) . '/config/theme.php',
+            'view' => require dirname(__DIR__) . '/config/view.php',
         ]);
     }, true);
+
+
+add_theme_support('menus');
+function register_my_menus()
+{
+    register_nav_menus(
+        array(
+            'main-menu' => __('Header Menu'),
+            'extra-menu' => __('Extra Menu')
+
+        )
+    );
+}
+
+add_action('init', 'register_my_menus');
+
+
+if( !defined(THEME_IMG_PATH)){
+    define( 'THEME_IMG_PATH', get_stylesheet_directory_uri() . '/images/' );
+}
+
+
+@ini_set( 'upload_max_size' , '512M' );
+@ini_set( 'post_max_size', '512M');
+@ini_set( 'max_execution_time', '300' );
