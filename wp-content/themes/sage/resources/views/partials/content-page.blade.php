@@ -2,20 +2,23 @@
 {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
 
 
+
+
 <section id="slider">
   <?php echo do_shortcode("[rev_slider alias=slider1]"); ?>
 </section>
 
 <?php echo do_shortcode('
-<p>[vc_row][vc_column][vc_separator][/vc_column][/vc_row]</p>
-           [vc_row][vc_column width="1/2"][vc_wp_recentcomments number="5"][/vc_column][vc_column width="1/2"][vc_wp_posts number="5"][/vc_column][/vc_row]
-            ');
+<p>[vc_row full_width="stretch_row" content_placement="middle" parallax="content-moving-fade" css_animation="fadeInDownBig" css=".vc_custom_1564982534471{margin-top: 20px !important;}"][vc_column parallax="content-moving-fade" css_animation="fadeInLeft" width="1/2" css=".vc_custom_1564982540558{margin-top: 20px !important;}"][vc_wp_recentcomments number="5"][/vc_column][vc_column width="1/2"][vc_wp_posts number="5"][/vc_column][/vc_row][vc_row][vc_column][vc_separator][/vc_column][/vc_row]</p>
+');
 ?>
 
 
 <section id="about">
   <div class="container">
     <header class="section-header">
+      <br>
+
       <h3>درباره ما</h3>
       <p>
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
@@ -24,9 +27,9 @@
       </p>
     </header>
     <div class="row">
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-offset="150">
+      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-offset="150" data-wow-delay="0.3s">
         <div class="card shadow-sm mb-5">
-          <img src="http://localhost:3003/wp-content/themes/sage/images/about/mission.jpg" class="card-img-top"/>
+          <img src="<?php bloginfo('template_url'); ?>/images/about/mission.jpg" class="card-img-top"/>
           <div class="card-body text-center p-4">
             <h3 class="card-title mb-3">ماموریت ما</h3>
             <p class="card-text">
@@ -37,9 +40,9 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-offset="150" data-wow-delay="0.15s">
+      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-offset="150" data-wow-delay="0.3s">
         <div class="card shadow-sm mb-5">
-          <img src="http://localhost:3003/wp-content/themes/sage/images/about/plan.jpg" class="card-img-top"/>
+          <img src="<?php bloginfo('template_url'); ?>/images/about/plan.jpg" class="card-img-top"/>
           <div class="card-body text-center p-4">
             <h3 class="card-title mb-3">نقشه راه</h3>
             <p class="card-text">
@@ -52,7 +55,7 @@
       </div>
       <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-offset="150" data-wow-delay="0.3s">
         <div class="card shadow-sm mb-5">
-          <img src="http://localhost:3003/wp-content/themes/sage/images/about/vision.jpg" class="card-img-top"/>
+          <img src="<?php bloginfo('template_url'); ?>/images/about/vision.jpg" class="card-img-top"/>
           <div class="card-body text-center p-4">
             <h3 class="card-title mb-3">تفکر ما</h3>
             <p class="card-text">
@@ -69,6 +72,7 @@
 <section id="services">
   <div class="container">
     <header class="section-header">
+      <br>
       <h3>خدمات ما</h3>
       <p>
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
@@ -132,6 +136,8 @@
 <section id="stats">
   <div class="container">
     <header class="section-header">
+      <br>
+
       <h3>آمار و ارقام</h3>
       <p>
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
@@ -162,6 +168,8 @@
 <section id="skills">
   <div class="container">
     <header class="section-header">
+      <br>
+
       <h3>مهارت‌های ما</h3>
       <p>
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
@@ -202,6 +210,8 @@
 <section id="portfolio">
   <div class="container">
     <header class="section-header">
+      <br>
+
       <h3>نمونه کارهای ما</h3>
     </header>
     <ul id="portfolio-filter">
@@ -214,12 +224,12 @@
       <div class="col-lg-4 col-md-6 wow fadeInUp app" data-wow-offset="50">
         <div class="card shadow-sm mb-4">
           <div class="position-relative">
-            <img src="http://localhost:3003/wp-content/themes/sage/images/portfolio/app1.jpg" class="card-img-top"/>
+            <img src="<?php bloginfo('template_url'); ?>/images/portfolio/app1.jpg" class="card-img-top"/>
             <div class="card-img-overlay">
               <a href="#">
                 <i class="fa fa-external-link"></i>
               </a>
-              <a href="http://localhost:3003/wp-content/themes/sage/images/portfolio/app1.jpg" data-lightbox="portfolio"
+              <a href="<?php bloginfo('template_url'); ?>/images/portfolio/app1.jpg" data-lightbox="portfolio"
                  data-title="نرم افزار اول">
                 <i class="fa fa-eye"></i>
               </a>
@@ -234,12 +244,12 @@
       <div class="col-lg-4 col-md-6 wow fadeInUp app" data-wow-offset="50" data-wow-delay="0.1s">
         <div class="card shadow-sm mb-4">
           <div class="position-relative">
-            <img src="http://localhost:3003/wp-content/themes/sage/images/portfolio/app2.jpg" class="card-img-top"/>
+            <img src="<?php bloginfo('template_url'); ?>/images/portfolio/app2.jpg" class="card-img-top"/>
             <div class="card-img-overlay">
               <a href="#">
                 <i class="fa fa-external-link"></i>
               </a>
-              <a href="http://localhost:3003/wp-content/themes/sage/images/portfolio/app2.jpg" data-lightbox="portfolio"
+              <a href="<?php bloginfo('template_url'); ?>/images/portfolio/app2.jpg" data-lightbox="portfolio"
                  data-title="نرم افزار دوم">
                 <i class="fa fa-eye"></i>
               </a>
@@ -254,12 +264,12 @@
       <div class="col-lg-4 col-md-6 wow fadeInUp graphic" data-wow-offset="50" data-wow-delay="0.2s">
         <div class="card shadow-sm mb-4">
           <div class="position-relative">
-            <img src="http://localhost:3003/wp-content/themes/sage/images/portfolio/graphic1.jpg" class="card-img-top"/>
+            <img src="<?php bloginfo('template_url'); ?>/images/portfolio/graphic1.jpg" class="card-img-top"/>
             <div class="card-img-overlay">
               <a href="#">
                 <i class="fa fa-external-link"></i>
               </a>
-              <a href="http://localhost:3003/wp-content/themes/sage/images/portfolio/graphic1.jpg"
+              <a href="<?php bloginfo('template_url'); ?>/images/portfolio/graphic1.jpg"
                  data-lightbox="portfolio" data-title="گرافیک اول">
                 <i class="fa fa-eye"></i>
               </a>
@@ -274,12 +284,12 @@
       <div class="col-lg-4 col-md-6 wow fadeInUp web" data-wow-offset="50">
         <div class="card shadow-sm mb-4">
           <div class="position-relative">
-            <img src="http://localhost:3003/wp-content/themes/sage/images/portfolio/web1.jpg" class="card-img-top"/>
+            <img src="<?php bloginfo('template_url'); ?>/images/portfolio/web1.jpg" class="card-img-top"/>
             <div class="card-img-overlay">
               <a href="#">
                 <i class="fa fa-external-link"></i>
               </a>
-              <a href="http://localhost:3003/wp-content/themes/sage/images/portfolio/web1.jpg" data-lightbox="portfolio"
+              <a href="<?php bloginfo('template_url'); ?>/images/portfolio/web1.jpg" data-lightbox="portfolio"
                  data-title="وبسایت اول">
                 <i class="fa fa-eye"></i>
               </a>
@@ -294,12 +304,12 @@
       <div class="col-lg-4 col-md-6 wow fadeInUp graphic" data-wow-offset="50" data-wow-delay="0.1s">
         <div class="card shadow-sm mb-4">
           <div class="position-relative">
-            <img src="http://localhost:3003/wp-content/themes/sage/images/portfolio/graphic2.jpg" class="card-img-top"/>
+            <img src="<?php bloginfo('template_url'); ?>/images/portfolio/graphic2.jpg" class="card-img-top"/>
             <div class="card-img-overlay">
               <a href="#">
                 <i class="fa fa-external-link"></i>
               </a>
-              <a href="http://localhost:3003/wp-content/themes/sage/images/portfolio/graphic2.jpg"
+              <a href="<?php bloginfo('template_url'); ?>/images/portfolio/graphic2.jpg"
                  data-lightbox="portfolio" data-title="گرافیک دوم">
                 <i class="fa fa-eye"></i>
               </a>
@@ -314,12 +324,12 @@
       <div class="col-lg-4 col-md-6 wow fadeInUp app" data-wow-offset="50" data-wow-delay="0.2s">
         <div class="card shadow-sm mb-4">
           <div class="position-relative">
-            <img src="http://localhost:3003/wp-content/themes/sage/images/portfolio/app3.jpg" class="card-img-top"/>
+            <img src="<?php bloginfo('template_url'); ?>/images/portfolio/app3.jpg" class="card-img-top"/>
             <div class="card-img-overlay">
               <a href="#">
                 <i class="fa fa-external-link"></i>
               </a>
-              <a href="http://localhost:3003/wp-content/themes/sage/images/portfolio/app3.jpg" data-lightbox="portfolio"
+              <a href="<?php bloginfo('template_url'); ?>/images/portfolio/app3.jpg" data-lightbox="portfolio"
                  data-title="نرم افزار سوم">
                 <i class="fa fa-eye"></i>
               </a>
@@ -334,12 +344,12 @@
       <div class="col-lg-4 col-md-6 wow fadeInUp web" data-wow-offset="50">
         <div class="card shadow-sm mb-4">
           <div class="position-relative">
-            <img src="http://localhost:3003/wp-content/themes/sage/images/portfolio/web2.jpg" class="card-img-top"/>
+            <img src="<?php bloginfo('template_url'); ?>/images/portfolio/web2.jpg" class="card-img-top"/>
             <div class="card-img-overlay">
               <a href="#">
                 <i class="fa fa-external-link"></i>
               </a>
-              <a href="http://localhost:3003/wp-content/themes/sage/images/portfolio/web2.jpg" data-lightbox="portfolio"
+              <a href="<?php bloginfo('template_url'); ?>/images/portfolio/web2.jpg" data-lightbox="portfolio"
                  data-title="وبسایت دوم">
                 <i class="fa fa-eye"></i>
               </a>
@@ -354,12 +364,12 @@
       <div class="col-lg-4 col-md-6 wow fadeInUp web" data-wow-offset="50" data-wow-delay="0.1s">
         <div class="card shadow-sm mb-4">
           <div class="position-relative">
-            <img src="http://localhost:3003/wp-content/themes/sage/images/portfolio/web3.jpg" class="card-img-top"/>
+            <img src="<?php bloginfo('template_url'); ?>/images/portfolio/web3.jpg" class="card-img-top"/>
             <div class="card-img-overlay">
               <a href="#">
                 <i class="fa fa-external-link"></i>
               </a>
-              <a href="http://localhost:3003/wp-content/themes/sage/images/portfolio/web3.jpg" data-lightbox="portfolio"
+              <a href="<?php bloginfo('template_url'); ?>/images/portfolio/web3.jpg" data-lightbox="portfolio"
                  data-title="وبسایت سوم">
                 <i class="fa fa-eye"></i>
               </a>
@@ -374,12 +384,12 @@
       <div class="col-lg-4 col-md-6 wow fadeInUp graphic" data-wow-offset="50" data-wow-delay="0.2s">
         <div class="card shadow-sm mb-4">
           <div class="position-relative">
-            <img src="http://localhost:3003/wp-content/themes/sage/images/portfolio/graphic3.jpg" class="card-img-top"/>
+            <img src="<?php bloginfo('template_url'); ?>/images/portfolio/graphic3.jpg" class="card-img-top"/>
             <div class="card-img-overlay">
               <a href="#">
                 <i class="fa fa-external-link"></i>
               </a>
-              <a href="http://localhost:3003/wp-content/themes/sage/images/portfolio/graphic3.jpg"
+              <a href="<?php bloginfo('template_url'); ?>/images/portfolio/graphic3.jpg"
                  data-lightbox="portfolio" data-title="گرافیک سوم">
                 <i class="fa fa-eye"></i>
               </a>
@@ -398,13 +408,15 @@
 <section id="team">
   <div class="container">
     <header class="section-header wow fadeInUp">
+      <br>
+
       <h3>تیم ما</h3>
       <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
     </header>
     <div class="row">
       <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-offset="150">
         <div class="card">
-          <img src="http://localhost:3003/wp-content/themes/sage/images/team/team-1.jpg" class="card-img-top"/>
+          <img src="<?php bloginfo('template_url'); ?>/images/team/team-1.jpg" class="card-img-top"/>
           <div class="card-img-overlay">
             <h4><a href="#">عضو اول</a></h4>
             <p>برنامه نویس</p>
@@ -419,7 +431,7 @@
       </div>
       <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s" data-wow-offset="150">
         <div class="card">
-          <img src="http://localhost:3003/wp-content/themes/sage/images/team/team-2.jpg" class="card-img-top"/>
+          <img src="<?php bloginfo('template_url'); ?>/images/team/team-2.jpg" class="card-img-top"/>
           <div class="card-img-overlay">
             <h4><a href="#">عضو دوم</a></h4>
             <p>گرافیست</p>
@@ -434,7 +446,7 @@
       </div>
       <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s" data-wow-offset="150">
         <div class="card">
-          <img src="http://localhost:3003/wp-content/themes/sage/images/team/team-3.jpg" class="card-img-top"/>
+          <img src="<?php bloginfo('template_url'); ?>/images/team/team-3.jpg" class="card-img-top"/>
           <div class="card-img-overlay">
             <h4><a href="#">عضو سوم</a></h4>
             <p>طراح وب</p>
@@ -449,7 +461,7 @@
       </div>
       <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s" data-wow-offset="150">
         <div class="card">
-          <img src="http://localhost:3003/wp-content/themes/sage/images/team/team-4.jpg" class="card-img-top"/>
+          <img src="<?php bloginfo('template_url'); ?>/images/team/team-4.jpg" class="card-img-top"/>
           <div class="card-img-overlay">
             <h4><a href="#">عضو چهارم</a></h4>
             <p>برنامه نویس</p>
@@ -469,17 +481,19 @@
 <section id="clients">
   <div class="container wow zoomIn" data-wow-duration="1.2s" data-wow-offset="120">
     <header class="section-header">
+      <br>
+
       <h3>مشتریان ما</h3>
     </header>
     <div class="owl-carousel">
-      <a href="#"><img src="http://localhost:3003/wp-content/themes/sage/images/clients/client-1.png"/></a>
-      <a href="#"><img src="http://localhost:3003/wp-content/themes/sage/images/clients/client-2.png"/></a>
-      <a href="#"><img src="http://localhost:3003/wp-content/themes/sage/images/clients/client-3.png"/></a>
-      <a href="#"><img src="http://localhost:3003/wp-content/themes/sage/images/clients/client-4.png"/></a>
-      <a href="#"><img src="http://localhost:3003/wp-content/themes/sage/images/clients/client-5.png"/></a>
-      <a href="#"><img src="http://localhost:3003/wp-content/themes/sage/images/clients/client-6.png"/></a>
-      <a href="#"><img src="http://localhost:3003/wp-content/themes/sage/images/clients/client-7.png"/></a>
-      <a href="#"><img src="http://localhost:3003/wp-content/themes/sage/images/clients/client-8.png"/></a>
+      <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/clients/client-1.png"/></a>
+      <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/clients/client-2.png"/></a>
+      <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/clients/client-3.png"/></a>
+      <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/clients/client-4.png"/></a>
+      <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/clients/client-5.png"/></a>
+      <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/clients/client-6.png"/></a>
+      <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/clients/client-7.png"/></a>
+      <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/clients/client-8.png"/></a>
     </div>
   </div>
 </section>

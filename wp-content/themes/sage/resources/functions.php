@@ -92,6 +92,18 @@ Container::getInstance()
     }, true);
 
 
+
+
+
+
+
+
+@ini_set( 'upload_max_size' , '512M' );
+@ini_set( 'post_max_size', '512M');
+@ini_set( 'max_execution_time', '300' );
+
+
+
 add_theme_support('menus');
 function register_my_menus()
 {
@@ -107,11 +119,4 @@ function register_my_menus()
 add_action('init', 'register_my_menus');
 
 
-if( !defined(THEME_IMG_PATH)){
-    define( 'THEME_IMG_PATH', get_stylesheet_directory_uri() . '/images/' );
-}
 
-
-@ini_set( 'upload_max_size' , '512M' );
-@ini_set( 'post_max_size', '512M');
-@ini_set( 'max_execution_time', '300' );
