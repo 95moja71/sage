@@ -118,5 +118,28 @@ function register_my_menus()
 
 add_action('init', 'register_my_menus');
 
+function my_get_menu_item_name( $loc ) {
+    global $post;
+
+    $locs = get_nav_menu_locations();
+
+    $menu = wp_get_nav_menu_object( $locs[$loc] );
+
+    if($menu) {
+
+        $items = wp_get_nav_menu_items($menu->term_id);
+
+        foreach ($items as $k => $v) {
+            // Check if this menu item links to the current page
+            if ($items[$k]->object_id == $post->ID) {
+                $name = $items[$k]->title;
+                break;
+            }
+        }
+
+    }
+    return $name;
+}
+
 
 

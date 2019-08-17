@@ -1,42 +1,41 @@
-.banner .nav li {
-  @extend .nav-item;
-}
-
-.banner .nav a {
-  @extend .nav-link;
-}
-
-
-
-
-.container-fluid{
-  padding-right: 0;
-  padding-left: 0;
-}
 
 a:hover{
   text-decoration: none;
 }
+.container-fluid{
+  padding: 0;
+  margin: 0;
+}
+a{
+  color: white !important;
+}
+#navbar #logo{
+  background: #18d26e;
+  padding: 5px;
+
+  border-radius: 3px;
+  width: 100px;
+}
 
 #navbar{
-  position: fixed;
-  padding: 20px 40px;
-  right: 0;
-  left: 0;
-  top:0;
-  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 1px 15px;
+  background-color: rgba(0 , 0 , 0 , 0.8) !important;
+  height: 60px;
   transition-duration: 0.5s;
+  box-shadow: 2px 2px 2px #555555;
 }
 
 #logo a{
-  color: white;
+  color:#555555;
 }
 
 #toggler{
   position: absolute;
   left: 40px;
   top: 15px;
-  color: white;
+  color: #555555;
   cursor: pointer;
   font-size: 30px;
 }
@@ -50,19 +49,18 @@ a:hover{
   bottom: 0;
   line-height: 2.5em;
   padding-top: 30px;
-  transition-duration: 0.4s;
+  z-index: 1000;
 }
 
 #nav a{
   color: white;
   font-weight: 500;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 #nav a:hover{
   color: #bdf;
 }
-
 @media (min-width: 992px) {
   #toggler{
     display: none;
@@ -81,16 +79,18 @@ a:hover{
 
   #navbar{
     display: flex;
-  }
-
-  #logo{
+    align-items: center;
     order: 1;
-    margin-right: auto;
+  }
+  #logo{
+    margin-top: 0 !important;
+  }
+  #navbar #portfolio{
+    background: red;
+    padding: 5px;
+    border-radius: 3px;
+    display: block !important;
   }
 
-  #logo h4{
-    margin-top: 4px;
-    margin-bottom: 0;
-  }
 
 }
